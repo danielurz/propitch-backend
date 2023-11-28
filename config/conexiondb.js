@@ -1,4 +1,7 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv"
+
+dotenv.config() 
 
 export const conexionDB = async () => {
     try {
@@ -8,7 +11,7 @@ export const conexionDB = async () => {
         })
         console.log(`MongoDB conectado en el puerto ${db.connection.port}`)
         return db.connection
-        
+         
     } catch (error) {
         console.log(`Error al conectarse a la DB: ${error.message}`)
         process.exit(1)

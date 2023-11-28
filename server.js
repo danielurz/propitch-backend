@@ -1,13 +1,12 @@
 import express from "express"
-import dotenv from "dotenv"
 import { conexionDB } from "./config/conexiondb.js"
 import cors from "cors"
 import sudoRouter from "./routes/sudo.routes.js"
 
 const app = express()
+
 app.use(express.json())
 app.use(cors())
-app.use(dotenv.config())
 conexionDB()
 
 app.use("/api/sudo", sudoRouter) 

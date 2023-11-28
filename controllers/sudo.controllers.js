@@ -6,7 +6,7 @@ import Residencia from "../models/residencia.models.js";
 const db = await conexionDB()
 const Sudo = db.collection("superAdmin")
 
-
+ 
 export const login = async (req,res) => {
     try {
         const {email,password} = req.body
